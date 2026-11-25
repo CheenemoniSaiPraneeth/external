@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8090:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: word
+      WORDPRESS_DB_PASSWORD: word
+      WORDPRESS_DB_USER: user
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: word
+      MYSQL_USER: user
+      MYSQL_PASSWORD: word
+      MYSQL_ROOT_PASSWORD: word
+         
+       
